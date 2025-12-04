@@ -164,7 +164,7 @@
                 Hubungi kami sekarang untuk mendapatkan penawaran terbaik
             </p>
             <div class="space-x-4">
-                <a href="https://wa.me/6281234567890?text=Halo, saya tertarik dengan produk kaos Anda. Bisa minta informasi lebih lanjut?"
+                <a href="https://wa.me/+6282221274040?text=Halo, saya tertarik dengan produk kaos Anda. Bisa minta informasi lebih lanjut?"
                     target="_blank"
                     class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
                     Hubungi WhatsApp

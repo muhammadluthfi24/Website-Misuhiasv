@@ -148,7 +148,7 @@
 
                 <!-- Order Button -->
                 <div class="mt-10">
-                    <a href="https://wa.me/6281234567890?text=Halo, saya tertarik membeli kaos {{ urlencode($product->name) }}. Apakah masih tersedia?" 
+                    <a href="https://wa.me/+6282221274040?text=Halo, saya tertarik membeli kaos {{ urlencode($product->name) }}. Apakah masih tersedia?" 
                        target="_blank"
                        class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 flex items-center justify-center text-lg">
                         <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -161,7 +161,7 @@
                 <!-- Additional Info -->
                 <div class="mt-6 text-center">
                     <p class="text-sm text-gray-500">
-                        Atau hubungi kami di <strong>+62 812-3456-7890</strong> untuk informasi lebih lanjut
+                        Atau hubungi kami di <strong>+62 822-2127-4040</strong> untuk informasi lebih lanjut
                     </p>
                 </div>
             </div>

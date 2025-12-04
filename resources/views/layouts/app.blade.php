@@ -26,13 +26,16 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="{{ route('home') }}"
                         class="text-white hover:text-blue-200 transition duration-300">Home</a>
+                          <a href="{{ route('tentang') }}"
+                        class="text-white hover:text-blue-200 transition duration-300">Tentang</a>   
                     <a href="{{ route('products.index') }}"
                         class="text-white hover:text-blue-200 transition duration-300">Product</a>
                     <a href="{{ route('catalogue') }}"
                         class="text-white hover:text-blue-200 transition duration-300">Catalogue</a>
                     <a href="{{ route('track.order') }}"
-                        class="text-white hover:text-blue-200 transition duration-300 border-b-2 border-blue-300">Track
+                        class="text-white hover:text-blue-200 transition duration-300">Track
                         Order</a>
+                    
                 </div>
 
                 <!-- Mobile Menu -->
@@ -51,6 +54,7 @@
                 <a href="{{ route('products.index') }}" class="block text-white py-2 hover:text-blue-200">Product</a>
                 <a href="{{ route('catalogue') }}" class="block text-white py-2 hover:text-blue-200">Catalogue</a>
                 <a href="{{ route('track.order') }}" class="block text-white py-2 hover:text-blue-200">Track Order</a>
+                <a href="{{ route('tentang') }}" class="block text-white py-2 hover:text-blue-200">Tentang</a>
             </div>
         </nav>
     </header>
@@ -73,16 +77,19 @@
                     <h3 class="text-lg font-semibold mb-4">Navigasi</h3>
                     <ul class="space-y-2">
                         <li><a href="{{ route('home') }}" class="text-blue-200 hover:text-white">Home</a></li>
+                           <li><a href="{{ route('tentang') }}" class="text-blue-200 hover:text-white">Tentang</a>
+                        </li>
                         <li><a href="{{ route('products.index') }}" class="text-blue-200 hover:text-white">Product</a>
                         </li>
                         <li><a href="{{ route('catalogue') }}" class="text-blue-200 hover:text-white">Catalogue</a></li>
                         <li><a href="{{ route('track.order') }}" class="text-blue-200 hover:text-white">Track Order</a>
                         </li>
+                     
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Kontak</h3>
-                    <p class="text-blue-200">WhatsApp: +62 812-3456-7890</p>
+                    <p class="text-blue-200">WhatsApp: +62 822-2127-4040</p>
                     <p class="text-blue-200">Email: info@misuhiasu.com</p>
                 </div>
             </div>

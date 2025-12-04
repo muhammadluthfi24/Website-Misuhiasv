@@ -8,8 +8,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/products/{slug}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/catalogue', [ProductController::class, 'catalogue'])->name('catalogue');
+Route::get('/tentang', function () {
+    return view('tentang');
+})->name('tentang');
+
 Route::get('/track-order', function () {
     return view('track-order');
 })->name('track.order');
-
-

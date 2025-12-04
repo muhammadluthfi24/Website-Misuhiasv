@@ -37,7 +37,6 @@
                                      class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
                                      onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiBmaWxsPSIjOUI5QjlCIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+S0FPUzwvdGV4dD4KPC9zdmc+'">
                             </a>
-                            
                             <div class="absolute top-4 right-4">
                                 <span class="bg-slate-900 text-white px-2 py-1 rounded-full text-xs font-semibold">
                                     {{ $product->category->name }}
