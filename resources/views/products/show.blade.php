@@ -37,6 +37,31 @@
     </div>
 </section>
 
+
+<!-- Discount Code Section -->
+<section class="bg-yellow-50 py-6 border-b border-yellow-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-yellow-800 mb-2">Punya Kode Promo? 🎁</h3>
+        <p class="text-yellow-700 mb-4 text-sm">Masukkan kode untuk dapat potongan harga.</p>
+
+        <form action="{{ route('discount.apply') }}" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center">
+            @csrf
+            <input type="text" name="code" placeholder="Contoh: KAOSHEMAT"
+                class="border border-yellow-300 rounded-lg px-4 py-2 w-full sm:w-64" required>
+            <button type="submit"
+                class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-6 rounded-lg">Terapkan</button>
+        </form>
+
+        @if (session('discount_success'))
+            <p class="mt-3 text-green-700 font-semibold">{{ session('discount_success') }}</p>
+        @endif
+
+        @if (session('discount_error'))
+            <p class="mt-3 text-red-600 font-semibold">{{ session('discount_error') }}</p>
+        @endif
+    </div>
+</section>
+
 <!-- Product Detail -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,9 +92,27 @@
 
                 <!-- Price -->
                 <div class="mt-6">
-                    <p class="text-3xl tracking-tight text-slate-900 font-bold">
-                        Rp {{ number_format($product->price, 0, ',', '.') }}
-                    </p>
+                   @php
+        $discount = session('discount_percent') ?? 0;
+        $originalPrice = $product->price;
+        $finalPrice = $originalPrice - ($originalPrice * $discount / 100);
+    @endphp
+
+    @if ($discount > 0)
+        <p class="text-xl line-through text-red-500 font-semibold">
+            Rp {{ number_format($originalPrice, 0, ',', '.') }}
+        </p>
+        <p class="text-3xl text-green-600 font-bold">
+            Rp {{ number_format($finalPrice, 0, ',', '.') }}
+        </p>
+        <p class="text-green-600 font-medium text-sm mt-1">
+            🎉 Diskon {{ $discount }}% berhasil diterapkan
+        </p>
+    @else
+        <p class="text-3xl tracking-tight text-slate-900 font-bold">
+            Rp {{ number_format($originalPrice, 0, ',', '.') }}
+        </p>
+    @endif
                 </div>
 
                 <!-- Description -->
