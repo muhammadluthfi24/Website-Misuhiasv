@@ -79,10 +79,7 @@
     <div id="tentang" class="subcontent">
         <h2 class="section-title">Tentang Misuhiasu<span></span></h2>
         <p class="section-body">
-            Misuhiasu merupakan brand fashion modern yang lahir dari semangat kreativitas dan keinginan untuk
-            menghadirkan gaya yang nyaman, trendi, dan dapat diakses oleh semua kalangan. Dengan perkembangan
-            industri fashion digital yang sangat dinamis, Misuhiasu terus berkembang mengikuti kebutuhan dan
-            preferensi konsumen Indonesia.
+            Misuhiasu merupakan Membantu Mengeksperikan perassan hati
         </p>
 
         {{-- 🔻 Tujuan Kami --}}

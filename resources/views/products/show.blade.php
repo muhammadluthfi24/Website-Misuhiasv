@@ -126,22 +126,27 @@
                             <div class="text-gray-600">S</div>
                             <div class="text-gray-600">48 cm</div>
                             <div class="text-gray-600">68 cm</div>
-                            <div class="text-gray-600">19 cm</div>
+                            <div class="text-gray-600">20 cm</div>
                             
                             <div class="text-gray-600">M</div>
                             <div class="text-gray-600">50 cm</div>
                             <div class="text-gray-600">70 cm</div>
-                            <div class="text-gray-600">20 cm</div>
+                            <div class="text-gray-600">21 cm</div>
                             
                             <div class="text-gray-600">L</div>
                             <div class="text-gray-600">52 cm</div>
                             <div class="text-gray-600">72 cm</div>
-                            <div class="text-gray-600">21 cm</div>
+                            <div class="text-gray-600">22 cm</div>
                             
                             <div class="text-gray-600">XL</div>
                             <div class="text-gray-600">54 cm</div>
                             <div class="text-gray-600">74 cm</div>
-                            <div class="text-gray-600">22 cm</div>
+                            <div class="text-gray-600">23 cm</div>
+
+                             <div class="text-gray-600">XXL</div>
+                            <div class="text-gray-600">56 cm</div>
+                            <div class="text-gray-600">76 cm</div>
+                            <div class="text-gray-600">24 cm</div>
                         </div>
                     </div>
                 </div>

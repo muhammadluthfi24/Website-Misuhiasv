@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DiscountController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
@@ -15,3 +16,8 @@ Route::get('/tentang', function () {
 Route::get('/track-order', function () {
     return view('track-order');
 })->name('track.order');
+
+
+
+Route::post('/discount/apply', [DiscountController::class, 'apply'])->name('discount.apply');
+

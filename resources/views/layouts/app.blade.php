@@ -90,7 +90,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Kontak</h3>
                     <p class="text-blue-200">WhatsApp: +62 822-2127-4040</p>
-                    <p class="text-blue-200">Email: info@misuhiasu.com</p>
+                    <p class="text-blue-200">Email: misvhiasv@gmail.com</p>
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-8 pt-8 text-center">
