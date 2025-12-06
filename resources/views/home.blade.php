@@ -36,6 +36,30 @@
 
     </section>
 
+    <!-- Discount Code Section -->
+<section class="bg-yellow-50 py-6 border-b border-yellow-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-yellow-800 mb-2">Punya Kode Promo? 🎁</h3>
+        <p class="text-yellow-700 mb-4 text-sm">Masukkan kode untuk dapat potongan harga.</p>
+
+        <form action="{{ route('discount.apply') }}" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center">
+            @csrf
+            <input type="text" name="code" placeholder="Contoh: KAOSHEMAT"
+                class="border border-yellow-300 rounded-lg px-4 py-2 w-full sm:w-64" required>
+            <button type="submit"
+                class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-6 rounded-lg">Terapkan</button>
+        </form>
+
+        @if (session('discount_success'))
+            <p class="mt-3 text-green-700 font-semibold">{{ session('discount_success') }}</p>
+        @endif
+
+        @if (session('discount_error'))
+            <p class="mt-3 text-red-600 font-semibold">{{ session('discount_error') }}</p>
+        @endif
+    </div>
+</section>
+
     <!-- Featured Products Section -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,9 +98,31 @@
                                 </p>
 
                                 <div class="flex justify-between items-center">
-                                    <span class="text-2xl font-bold text-slate-900">
-                                        Rp {{ number_format($product->price, 0, ',', '.') }}
-                                    </span>
+                                      @php
+    $discount = session('discount_percent') ?? 0;
+    $originalPrice = $product->price;
+    $finalPrice = $originalPrice - ($originalPrice * $discount / 100);
+@endphp
+
+@if ($discount > 0)
+    <!-- Harga setelah diskon -->
+    <div class="text-right">
+        <span class="text-sm text-red-500 line-through">
+            Rp {{ number_format($originalPrice, 0, ',', '.') }}
+        </span>
+        <span class="text-xl font-bold text-green-600 block">
+            Rp {{ number_format($finalPrice, 0, ',', '.') }}
+        </span>
+        <span class="text-xs bg-green-600 text-white px-2 py-1 rounded">
+            Diskon {{ $discount }}% • Kode: {{ session('discount_code') }}
+        </span>
+    </div>
+@else
+    <!-- Harga normal -->
+    <span class="text-xl font-bold text-slate-900">
+        Rp {{ number_format($originalPrice, 0, ',', '.') }}
+    </span>
+@endif
 
                                     <a href="{{ route('products.show', $product->slug) }}"
                                         class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded transition duration-300">
